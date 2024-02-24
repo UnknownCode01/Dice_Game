@@ -1,50 +1,19 @@
-//  More Descriptive
-//  Here image source is Static
-var randomNumber1 = Math.floor(Math.random()*6+1);
-if(randomNumber1==1){
-    document.querySelectorAll("img")[0].setAttribute("src","./images/dice1.png");
-}
-else if(randomNumber1==2){
-    document.querySelectorAll("img")[0].setAttribute("src","./images/dice2.png");
-}
-else if(randomNumber1==3){
-    document.querySelectorAll("img")[0].setAttribute("src","./images/dice3.png");
-}
-else if(randomNumber1==4){
-    document.querySelectorAll("img")[0].setAttribute("src","./images/dice4.png");
-}
-else if(randomNumber1==5){
-    document.querySelectorAll("img")[0].setAttribute("src","./images/dice5.png");
-}
-else if(randomNumber1==6){
-    document.querySelectorAll("img")[0].setAttribute("src","./images/dice6.png");
-}
-var randomNumber2 = Math.floor(Math.random()*6+1);
-if(randomNumber2==1){
-    document.querySelectorAll("img")[1].setAttribute("src","./images/dice1.png");
-}
-else if(randomNumber2==2){
-    document.querySelectorAll("img")[1].setAttribute("src","./images/dice2.png");
-}
-else if(randomNumber2==3){
-    document.querySelectorAll("img")[1].setAttribute("src","./images/dice3.png");
-}
-else if(randomNumber2==4){
-    document.querySelectorAll("img")[1].setAttribute("src","./images/dice4.png");
-}
-else if(randomNumber2==5){
-    document.querySelectorAll("img")[1].setAttribute("src","./images/dice5.png");
-}
-else if(randomNumber2==6){
-    document.querySelectorAll("img")[1].setAttribute("src","./images/dice6.png");
-}
+//  Less Descriptive
+//  Here image source is Dynamic
+var r1 = Math.floor(Math.random()*6+1);         //r1->random image 1
+var is1 = "images/dice"+r1+".png";              //is1->image source 1
+document.querySelectorAll("img")[0].setAttribute("src",is1);
 
-if(randomNumber1==randomNumber2){
-    document.querySelector("h1").innerHTML="Draw";
+var r2 = Math.floor(Math.random()*6+1);         //r2->random image 2
+var is2 = "images/dice"+r2+".png";              //is2->image source 2
+document.querySelectorAll("img")[1].setAttribute("src",is2);
+
+if(r1>r2){
+    document.querySelector("h1").innerHTML = "🚩Player1 won";
 }
-else if(randomNumber1>randomNumber2){
-    document.querySelector("h1").innerHTML="🚩Player1 Won";
+else if(r1<r2){
+    document.querySelector("h1").innerHTML = "Player 2won🚩";
 }
 else{
-    document.querySelector("h1").innerHTML="Player2 Won🚩";
+        document.querySelector("h1").innerHTML = "Draw";
 }
