@@ -1,4 +1,3 @@
-//  Less Descriptive
 //  Here image source is Dynamic
 var r1 = Math.floor(Math.random()*6+1);         //r1->random image 1
 var is1 = "images/dice"+r1+".png";              //is1->image source 1
